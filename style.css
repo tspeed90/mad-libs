@@ -5,11 +5,38 @@ body {
   width: 100%;
   background-image: repeating-linear-gradient(to top,#F3E8D9, #49797F);
 }
+.display, .init-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.display {
+  width: 100%;
+  height: 100%;
+}
+.render {
+  width: 50%;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: #222;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+.create-button {
+  height: 50px;
+  background-color: #a1a1a1;
+  border-radius: 10px;
+
+}
 h1 {
   font-family: Cormorant Garamond, serif;
   font-size: 2rem;
   padding: 0;
   margin: 0;
+  text-align: center;
+  text-transform: capitalize;
 }
 .fancy {
   font-size: 4rem;
@@ -17,15 +44,12 @@ h1 {
   font-family: Dancing Script, serif;
   margin-bottom: 20px;
 }
-.input-area {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.create-button {
+  margin: auto;
 }
-.input-and-button {
+
+
+/*.input-and-button {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
@@ -38,7 +62,7 @@ h1 {
   padding: 5px;
   text-align: center;
   text-transform: lowercase;
-}
+}*/
 .button {
   height: 2rem;
   font-size: 1.2rem;
