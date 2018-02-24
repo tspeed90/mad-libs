@@ -21,7 +21,7 @@ function selectTemplate() {
 
 function createInput(word) {
   let inputLabels = document.createElement('label');
-  inputLabels.textContent = word;
+  inputLabels.innerText = word;
   let templateInput = document.createElement('input');
   inputLabels.appendChild(templateInput);
   templateInput.type = 'text';

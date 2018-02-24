@@ -4,6 +4,7 @@ html {
 body {
   width: 100%;
   background-image: repeating-linear-gradient(to top,#F3E8D9, #49797F);
+  overflow-x: hidden;
 }
 .display, .init-display {
   display: flex;
@@ -12,8 +13,7 @@ body {
   justify-content: center;
 }
 .display {
-  width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 .show-mad-lib {
   display: none;
@@ -57,11 +57,18 @@ h1 {
 .input-mode {
   display: none;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width:  50%;
+  color: #222;
+  text-align: center;
 }
+
+label {
+  display: block;
+}
+
 .word-fields {
   display: flex;
   flex-direction: column;
+}
+.word-fields input {
+  display: block;
 }
