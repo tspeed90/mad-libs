@@ -19,18 +19,22 @@ function selectTemplate() {
   return randomTemplate;
 }
 
-function createInput() {
-  let templateInput = document.createElement("input");
-  templateInput.type = "text";
-  templateInput.name = "word";
+function createInput(word) {
+  let inputLabels = document.createElement('label');
+  inputLabels.textContent = word;
+  let templateInput = document.createElement('input');
+  inputLabels.appendChild(templateInput);
+  templateInput.type = 'text';
+  templateInput.name = 'word';
   templateInput.required = true;
-  return templateInput;
+  return inputLabels;
 }
 
 function createInputElements(template) {
   let placeholders = template.match(/{+([^}]+)}+/g);
-  for (let word in placeholders) {
-    fields.appendChild(createInput());
+  for (let word of placeholders) {
+    let label = word.substring(2, word.length - 2);
+    fields.appendChild(createInput(label));
   }
   renderInputFields();
 }
